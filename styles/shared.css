@@ -29,19 +29,88 @@ a {
   color: rgb(185, 131, 31);
   font-size: 1.25rem;
 }
+@media screen and (max-width: 55.25rem) {
+  #main-header nav {
+    display: none;
+  }
+}
 #main-header nav a:hover {
   color: rgb(228, 163, 44);
 }
+
+#sidedraw {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#sidedraw:target {
+  display: block;
+}
+@media screen and (min-width: 55.26rem) {
+  #sidedraw:target {
+    display: none;
+  }
+}
+#sidedraw header {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 5%;
+}
+#sidedraw ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 4rem 1rem;
+}
+#sidedraw a {
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
+}
+#sidedraw li {
+  margin: 1rem 0;
+}
+
 #logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(238, 164, 80);
   text-transform: uppercase;
 }
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (min-width: 55.26rem) {
+  .menu-btn {
+    display: none;
+  }
+}
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
 main h1 {
   text-align: center;
   color: rgb(238, 164, 80);
   font-size: 3rem;
+}
+@media screen and (max-width: 55.25rem) {
+  main h1 {
+    font-size: 1.5rem;
+  }
 }
 #latest-products {
   width: 80%;
@@ -55,6 +124,11 @@ main h1 {
   padding: 0;
   list-style: none;
 }
+@media screen and (max-width: 55.25rem) {
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
+}
 .food-item {
   background-color: rgb(228, 206, 182);
   border-radius: 6px;
@@ -64,6 +138,9 @@ main h1 {
   height: 15rem;
   width: 100%;
   object-fit: cover;
+}
+.food-item h2 {
+  margin: 0 0 1rem 0'
 }
 .food-item-content {
   text-align: center;
